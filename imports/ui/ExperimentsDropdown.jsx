@@ -34,7 +34,7 @@ class ExperimentsDropdown extends Component {
 	    console.log('Remove experiment with ID: ' + this.state.selectedValue);
 	    console.log(Experiments.findOne({ _id: this.state.selectedValue }));
 	 
-	    Experiments.remove(this.state.selectedValue);
+	    Meteor.call('experiments.remove', this.state.selectedValue);
 	 
 	    // Clear form
 	    this.setState({selectedValue: ''});

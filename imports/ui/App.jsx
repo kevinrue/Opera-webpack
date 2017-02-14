@@ -27,10 +27,7 @@ class App extends Component {
     // Find the text field via the React ref
     const experimentName = ReactDOM.findDOMNode(this.refs.experimentNameInput).value.trim();
  
-    Experiments.insert({
-      name: experimentName,
-      Nsamples: 0 // new experiment: 0 samples
-    });
+    Meteor.call('experiments.insert', experimentName);
  
     // Clear form
     ReactDOM.findDOMNode(this.refs.experimentNameInput).value = '';
