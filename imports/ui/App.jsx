@@ -143,6 +143,7 @@ class App extends Component {
 
 App.propTypes = {
   experiments: PropTypes.array.isRequired,
+  currentUser: PropTypes.object,
 };
 
 // The wrapped 'App' component fetches tasks from the Tasks collection
@@ -151,6 +152,6 @@ export default createContainer(() => {
   return {
     experiments: Experiments.find({}).fetch(),
     experimentsCount: Experiments.find({}).count(),
-    currentUser: Meteor.user()
+    currentUser: Meteor.user(),
   };
 }, App);
