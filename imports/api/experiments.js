@@ -22,7 +22,6 @@ Meteor.methods({
   },
 
   'experiments.remove'(experimentId) {
-  	console.log(experimentId);
     check(experimentId, String);
  
     Experiments.remove(experimentId);
