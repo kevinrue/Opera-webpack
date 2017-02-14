@@ -67,7 +67,7 @@ class App extends Component {
   }
 
   renderWelcomeHeader(user) {
-    return "Hello, " + (user==null? "stranger" : user.username) + "!"
+    return "Hello, " + (user ? user.username : "stranger") + "!"
   }
 
   render() {
