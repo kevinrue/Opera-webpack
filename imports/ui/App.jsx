@@ -146,6 +146,9 @@ App.propTypes = {
 // The wrapped 'App' component fetches tasks from the Tasks collection
 // and supplies them to the underlying 'App' component it wraps as the 'tasks' prop.
 export default createContainer(() => {
+  // let's subscribe to that publication when the App component is created
+  Meteor.subscribe('experiments');
+
   return {
     experiments: Experiments.find({}).fetch(),
     experimentsCount: Experiments.find({}).count(),

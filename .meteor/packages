@@ -22,6 +22,5 @@ webpack:react
 webpack:less
 react-meteor-data
 twbs:bootstrap
-autopublish@1.0.7
 accounts-ui@1.1.9
 accounts-password@1.3.3
